@@ -1,0 +1,4 @@
+task_1/variables/Generator.java
+ task_1.variables.Generator
+task_1/variables/Math.java
+ task_1.variables.Math
