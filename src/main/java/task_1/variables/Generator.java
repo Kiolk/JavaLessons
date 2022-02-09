@@ -1,5 +1,6 @@
 package task_1.variables;
 
+
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class Generator {
