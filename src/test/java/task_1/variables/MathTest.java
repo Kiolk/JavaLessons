@@ -4,24 +4,26 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Random;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MathTest {
 
-    private Math math;
+    private IMath math;
 
     @BeforeEach
     public void setup() {
-        math = new Math();
+        math = new Math2Impl();
     }
 
     @Test
     @DisplayName("Check sum to integer")
     public void checkSum() {
-        int firstInt = 4;
-        int secondInt = 5;
+        int firstInt = new Random().nextInt();
+        int secondInt = new Random().nextInt();
 
-        int result = math.plus(firstInt,secondInt);
+        int result = math.plus(firstInt, secondInt);
 
         assertEquals(firstInt + secondInt, result);
     }
@@ -29,10 +31,10 @@ class MathTest {
     @Test
     @DisplayName("Check minus to integer")
     public void checkMinus() {
-        int firstInt = 4;
-        int secondInt = 5;
+        int firstInt = new Random().nextInt();
+        int secondInt = new Random().nextInt();
 
-        int result = math.minus(firstInt,secondInt);
+        int result = math.minus(firstInt, secondInt);
 
         assertEquals(firstInt - secondInt, result);
     }
@@ -40,10 +42,10 @@ class MathTest {
     @Test
     @DisplayName("Check multiple to integer")
     public void checkMultiple() {
-        int firstInt = 4;
-        int secondInt = 5;
+        int firstInt = new Random().nextInt();
+        int secondInt = new Random().nextInt();
 
-        int result = math.multiple(firstInt,secondInt);
+        int result = math.multiple(firstInt, secondInt);
 
         assertEquals(firstInt * secondInt, result);
     }
@@ -51,10 +53,10 @@ class MathTest {
     @Test
     @DisplayName("Check divide to integer")
     public void checkDivide() {
-        int firstInt = 100;
-        int secondInt = 5;
+        int firstInt = new Random().nextInt();
+        int secondInt = new Random().nextInt();
 
-        int result = math.divide(firstInt,secondInt);
+        int result = math.divide(firstInt, secondInt);
 
         assertEquals(firstInt / secondInt, result);
     }
