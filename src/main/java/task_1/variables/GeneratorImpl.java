@@ -7,13 +7,11 @@ import java.util.Random;
 public class GeneratorImpl implements IGenerator {
 
     public int generateRandomNumber() {
-        int randomInt = new Random().nextInt();
-        return randomInt;
+        return new Random().nextInt();
     }
 
     public int generateRandomIntWithinSpecificRange(int min, int max) {
-        int randomIntWithinRange = (int) ((Math.random() * (max - min)) + min);
-        return randomIntWithinRange;
+        return (int) ((Math.random() * (max - min)) + min);
     }
 
     public String generateRandomWord() { // solution from internet
@@ -28,8 +26,7 @@ public class GeneratorImpl implements IGenerator {
                     (random.nextFloat() * (rightLimit - leftLimit + 1));
             buffer.append((char) randomLimitedInt);
         }
-        String generatedString = buffer.toString();
-        return generatedString;
+        return buffer.toString();
     }
 
     public String generateRandomName() {

@@ -12,9 +12,9 @@ public class Main {
         GeneratorImpl a = new GeneratorImpl();
         System.out.println(result.plus(a.generateRandomNumber(), a.generateRandomNumber()));// the sum of random numbers
 
-        System.out.println(result.minus(100,-23));
+        System.out.println(result.minus(-100,-23));
         System.out.println(result.divide(25,-5));
-        System.out.println(result.multiple(-5,-10));
+        System.out.println(result.multiple(5,-10));
 
         GeneratorImpl exampleInt = new GeneratorImpl(); // generates random integer with: new Random().nextInt()
         System.out.println (exampleInt.generateRandomNumber());
@@ -27,7 +27,6 @@ public class Main {
 
         GeneratorImpl b = new GeneratorImpl(); //Generates random integer within a specific range with Math.random()
         System.out.print(b.generateRandomIntWithinSpecificRange(-100, -20));
-
     }
 }
 

@@ -10,8 +10,7 @@ public class Generator2Impl implements IGenerator {
     public int generateRandomNumber() {
         double random = Math.random();
         double c = random * 100; // random int range from 0  to 100(?).
-        int randomInt = (int) Math.round(c); // rounding to an integer.
-        return randomInt;
+        return (int) Math.round(c); // rounding to an integer.
     }
 
     public int generateRandomIntWithinSpecificRange(int min, int max) { //Generates random integer within specific range with Random class.
@@ -24,8 +23,7 @@ public class Generator2Impl implements IGenerator {
     public String generateRandomWord() { // solution from internet.
         byte[] array = new byte[12]; // length is bounded by 12.
         new Random().nextBytes(array);
-        String generatedString = new String(array, Charset.forName("UTF-8"));
-        return generatedString;
+        return new String(array, Charset.forName("UTF-8"));
     }
 
     public String generateRandomName() {

@@ -12,7 +12,7 @@ class GeneratorTest {
 
     @BeforeEach
     public void setup() {
-        generator = new Generator2Impl();
+        generator = new GeneratorImpl();
     }
 
     @Test
