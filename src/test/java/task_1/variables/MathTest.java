@@ -14,7 +14,7 @@ class MathTest {
 
     @BeforeEach
     public void setup() {
-        math = new Math2Impl();
+        math = new MathImpl();
     }
 
     @Test

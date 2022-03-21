@@ -18,7 +18,7 @@ public class GeneratorImpl implements IGenerator {
 
         int leftLimit = 97; // letter 'a'
         int rightLimit = 122; // letter 'z'
-        int targetStringLength = 55;
+        int targetStringLength = 15;
         Random random = new Random();
         StringBuilder buffer = new StringBuilder(targetStringLength);
         for (int i = 0; i < targetStringLength; i++) {
@@ -30,8 +30,21 @@ public class GeneratorImpl implements IGenerator {
     }
 
     public String generateRandomName() {
-        //   return "Wer";
+
         //TODO implement logic for generate random word what is similar to name. Start from capital later, length min 3 later, min one vowels and max 3 consonants in row
-        throw new NotImplementedException();
+        int leftLimit = 97; // letter 'a'
+        int rightLimit = 122; // letter 'z'
+        int targetStringLength = 15;
+        Random random = new Random();
+        StringBuilder buffer = new StringBuilder(targetStringLength);
+        for (int i = 0; i < targetStringLength; i++) {
+            int randomLimitedInt = leftLimit + (int) (random.nextFloat() * (rightLimit - leftLimit + 1));
+            buffer.append((char) randomLimitedInt);
+        }
+        buffer.setCharAt(0, Character.toUpperCase(buffer.charAt(0)));
+        return buffer.toString();
+        }
     }
-}
+
+
+
